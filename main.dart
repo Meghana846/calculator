@@ -30,32 +30,34 @@ class _CalculatorAppState extends State<CalculatorApp> {
               child: Container(color: Colors.red)),
             Row(
               children: [
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(8),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12)),
-                          padding: const EdgeInsets.all(22),
-                          primary: buttonColor,
-                      ),
-                      onPressed: (){},
-                      child: const Text("1",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                ),
-              ),
-            ),
+                button(),button(),
           ],
         )
       ]
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-
+  Widget button() {
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.all(8),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12)),
+            padding: const EdgeInsets.all(22),
+            primary: buttonColor,
+          ),
+          onPressed: () {},
+          child: const Text("1",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
